@@ -8,7 +8,9 @@ def hello(bot, update):
 
 updater = Updater('697984917:AAEPmyM3LemXq5MkEcepsrzb927Im9_wsAA')
 
-updater.dispatcher.add_handler(CommandHandler('hello', hello))
+updater.dispatcher.add_handler(CommandHandler('ello', hello))
 
 updater.start_polling()
 updater.idle
+
+
