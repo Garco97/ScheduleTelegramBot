@@ -16,6 +16,7 @@ def horario(bot,update):
 				line2 = line2.decode('utf-8')
 
 				if line2  in ["Monday", "Tuesday", "Wednesday","Thursday" ,"Friday"]:
+					print("No more")
 					break
 				print("PAsa")	
 				horaInicio, separador,finAsignatura = line2.partition("-")
