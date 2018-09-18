@@ -13,6 +13,8 @@ def horario(bot,update):
 		if day.strftime("%A") in line:
 			update.message.reply_text(line )
 			for line2 in file:
+				line2 = line2.decode('utf-8')
+
 				if line2  in ["Monday", "Tuesday", "Wednesday","Thursday" ,"Friday"]:
 					break
 				print("PAsa")	
