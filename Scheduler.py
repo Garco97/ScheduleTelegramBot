@@ -3,10 +3,11 @@ import datetime
 import urllib.request
 
 def horario(bot,update):
-	print (now.hour,":",now.minute) 	
+		
 
 	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/Horario.txt")	
 	day = datetime.datetime.now()
+	print (now.hour,":",now.minute) 
 	for line in file:
 		line = line.decode('utf-8')
 		if day.strftime("%A") in line:
