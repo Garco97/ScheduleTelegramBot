@@ -15,14 +15,14 @@ def horario(bot,update):
 			for line2 in file:
 				if line2  in ["Monday", "Tuesday", "Wednesday","Thursday" ,"Friday"]:
 					break
+				print("PAsa")	
 				horaInicio, separador,finAsignatura = line2.partition("-")
 				horaFinal,separador,asignatura = finAsignatura.partition("_")
 				hora, separador, minuto = horaFinal.partition(":")			
 				final = (int(hora)*60) + int(minuto)
 				now = datetime.datetime.now()			
 				actual = ((now.hour+2)*60) + now.minute		
-				print(final)
-				print (actual)
+				print("pasa2")
 				if actual < final:
 					update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
 			pass
