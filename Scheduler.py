@@ -5,7 +5,7 @@ import urllib.request
 
 
 def horario(bot,update):
-
+	print("PRueba")
 	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/Horario.txt")	
 	day = datetime.datetime.now()
 	for line in file:
