@@ -1,0 +1,19 @@
+Monday
+8:30-9:30_Redes 
+9:30-10:30_Paralela
+11:45-12:45_ Algoritmos
+15:30-17:30_Practicas Graficos
+17:30-19:30_Practicas Redes
+
+Tuesday
+8:30-9:30_Redes 
+9:30-10:30_Paralela
+11:45-12:45_Algoritmos
+
+Wednesday
+8:30-10:30_Practicas de Algoritmos 
+13:45-14:45_Graficos
+
+
+Thursday
+Friday
