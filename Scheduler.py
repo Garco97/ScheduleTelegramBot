@@ -14,11 +14,11 @@ def horario(bot,update):
 			update.message.reply_text(line )
 			for line2 in file:
 				line2 = line2.decode('utf-8')
-
+				print("line2")	
 				if line2  in ["Monday", "Tuesday", "Wednesday","Thursday" ,"Friday"]:
 					print("No more")
 					break
-				print("PAsa")	
+				
 				horaInicio, separador,finAsignatura = line2.partition("-")
 				horaFinal,separador,asignatura = finAsignatura.partition("_")
 				hora, separador, minuto = horaFinal.partition(":")			
