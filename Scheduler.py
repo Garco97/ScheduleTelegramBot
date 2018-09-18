@@ -4,7 +4,7 @@ import datetime
 
 def horario(bot,update):
 
-	file = open("../SchedulerBot/Horario.txt")
+	file = open("../SchedulerTelegramBot/Horario.txt")
 	day = datetime.datetime.now()
 	for line in file:	
 		if day.strftime("%A") in line:
