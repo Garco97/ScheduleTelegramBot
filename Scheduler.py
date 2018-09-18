@@ -14,7 +14,7 @@ def horario(bot,update):
 			update.message.reply_text(line )
 			for line2 in file:
 				line2 = line2.decode('utf-8')
-				print("line2")	
+				print(line2)	
 				if line2  in ["Monday", "Tuesday", "Wednesday","Thursday" ,"Friday"]:
 					print("No more")
 					break
@@ -25,7 +25,7 @@ def horario(bot,update):
 				final = (int(hora)*60) + int(minuto)
 				now = datetime.datetime.now()			
 				actual = ((now.hour+2)*60) + now.minute		
-				print("pasa2")
+				
 				if actual < final:
 					update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
 			pass
