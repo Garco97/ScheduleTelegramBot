@@ -10,12 +10,10 @@ def horario(bot,update):
 	day = datetime.datetime.now()
 	for line in file:
 		line = line.decode('utf-8')
-		print(line)
 		if day.strftime("%A") in line:
 			update.message.reply_text(line )
 			for line2 in file:
 				if line2  in ["Monday", "Tuesday", "Wednesday","Thursday" ,"Friday"]:
-					print("No more classes")
 					break
 				horaInicio, separador,finAsignatura = line2.partition("-")
 				horaFinal,separador,asignatura = finAsignatura.partition("_")
