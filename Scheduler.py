@@ -7,7 +7,7 @@ def horario(bot,update):
 
 	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/Horario.txt")	
 	day = datetime.datetime.now()
-	print ("prueba" + day.strftime("%X")) 
+	 
 	for line in file:
 		line = line.decode('utf-8')
 		if day.strftime("%A") in line:
@@ -21,6 +21,8 @@ def horario(bot,update):
 				final = (int(hora)*60) + int(minuto)
 				now = datetime.datetime.now()			
 				actual = ((now.hour+2)*60) + now.minute		
+				print(final)
+				print (actual)
 				if actual < final:
 					update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
 			pass
