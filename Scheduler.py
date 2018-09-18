@@ -1,12 +1,16 @@
 from telegram.ext import Updater, CommandHandler
 import datetime
+import urllib.request
+
 
 
 def horario(bot,update):
 
-	file = open("Horario.txt")
+	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/Horario.txt")	
 	day = datetime.datetime.now()
-	for line in file:	
+	for line in file:
+		line = line.decode('utf-8')
+		print(line)
 		if day.strftime("%A") in line:
 			update.message.reply_text(line )
 			for line2 in file:
@@ -20,11 +24,7 @@ def horario(bot,update):
 				now = datetime.datetime.now()			
 				actual = (now.hour*60) + now.minute		
 				if actual < final:
-					
-
 					update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
-
-					
 			pass
 	pass
 
