@@ -17,5 +17,9 @@ Wednesday
 
 Thursday
 13:45-14:45_Graficos
+13:45-19:45_Graficos
+13:45-10:45_Graficos
+13:45-13:45_Graficos
+13:45-12:45_Graficos
 
 Friday
