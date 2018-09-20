@@ -28,8 +28,8 @@ def horario(bot,update):
 
 					if actual < final:
 						update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
-				pass
-		pass
+				
+
 	else:
 		update.message.reply_text("No tienes horario asignado")
 
