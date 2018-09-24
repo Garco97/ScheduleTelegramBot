@@ -1,5 +1,5 @@
 Monday
-8:30-9:30_Redes
+8:30-9:30_Redes Seminario de Informatica
 9:30-10:30_Paralela
 11:45-12:45_ Algoritmos
 15:30-17:30_Practicas Graficos
@@ -16,5 +16,5 @@ Wednesday
 
 
 Thursday
-13:45-14:45_Graficos 
+13:45-14:45_Graficos
 Friday
