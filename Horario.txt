@@ -1,20 +1,19 @@
 Monday
 8:30-9:30_Redes Seminario de Informatica
-9:30-10:30_Paralela
-11:45-12:45_ Algoritmos
+9:30-10:30_Paralela Seminario de Informatica
+11:45-12:45_Algoritmos Aula 10
 15:30-17:30_Practicas Graficos Lab 4
-17:30-19:30_Practicas Redes
 
 Tuesday
-8:30-9:30_Redes
-9:30-10:30_Paralela
-11:45-12:45_Algoritmos
+8:30-9:30_Redes Seminario de Informatica
+9:30-10:30_Paralela Seminario de Informatica
+11:45-12:45_Algoritmos Aula 10
 
 Wednesday
-8:30-10:30_Practicas de Algoritmos
-13:45-14:45_Graficos
+8:30-10:30_Practicas de Algoritmos Aula 10
+13:45-14:45_Graficos Aula 10
 
 
 Thursday
-13:45-14:45_Graficos
+13:45-14:45_Graficos Aula 10
 Friday
