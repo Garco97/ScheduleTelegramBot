@@ -2,7 +2,7 @@ from telegram.ext import Updater, CommandHandler
 import datetime
 import urllib.request
 
-def horario(bot,update):
+def hoy(bot,update):
 	user = update.message.from_user
 	if(user.id == 223472488):
 		file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/Horario.txt")
@@ -27,12 +27,13 @@ def horario(bot,update):
 						update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
 	else:
 		update.message.reply_text("No tienes horario asignado")
-def fname(arg):
-	pass
+def horario(bot,update):
+	update.message.reply_text("https://web.unican.es/centros/ciencias/Documents/Horarios%201819/Grado/G-Inf%202018-19%20V6.pdf")
+
 
 def main():
 	updater = Updater('697984917:AAEPmyM3LemXq5MkEcepsrzb927Im9_wsAA')
-	updater.dispatcher.add_handler(CommandHandler('Horario', horario))
+	updater.dispatcher.add_handler(CommandHandler('Hoy', hoy))
 	updater.start_polling()
 	updater.idle
 if __name__ == '__main__':
