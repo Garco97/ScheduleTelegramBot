@@ -34,6 +34,8 @@ def horario(bot,update):
 def main():
 	updater = Updater('697984917:AAEPmyM3LemXq5MkEcepsrzb927Im9_wsAA')
 	updater.dispatcher.add_handler(CommandHandler('Hoy', hoy))
+	updater.dispatcher.add_handler(CommandHandler('Horario', horario))
+
 	updater.start_polling()
 	updater.idle
 if __name__ == '__main__':
