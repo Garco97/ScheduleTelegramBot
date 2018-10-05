@@ -18,9 +18,9 @@ def hoy(bot,update):
 				horaInicio, separador,finAsignatura = line2.partition("-")
 				horaFinal,separador,asignatura = finAsignatura.partition("_")
 				hora, separador, minuto = horaFinal.partition(":")
-				final = (int(hora)*60) + int(minuto)
+				final = (int(hora) * 60) + int(minuto)
 				now = datetime.datetime.now()
-				actual = ((now.hour+2)*60) + now.minute
+				actual = ((now.hour + 2) * 60) + now.minute
 				if actual < final:
 					update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
 
@@ -31,8 +31,8 @@ def horario(bot,update):
 def trabajosPendientes(bot,update):
 	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/trabajos.txt")
 	for line in file:
-		print(line)
 		line = line.decode('utf-8')
+		print(line)
 		trabajo,separador,resto = line.partition("_")
 		asignatura,separador,dia = resto.partition("-")
 		update.message.reply_text("Entregar ",trabajo," de ",asignatura," el ", dia)
