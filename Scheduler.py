@@ -33,8 +33,8 @@ def trabajosPendientes(bot,update):
 	for line in file:
 		line = line.decode('utf-8')
 		print(line)
-		trabajo,separador,asignatura,separadorr,dia = line.partition("-")
-		#asignatura,separador,dia = resto.partition("-")	
+		trabajo,separador,resto = line.partition("_")
+		asignatura,separador,dia = resto.partition("-")	
 		update.message.reply_text("Entregar " + trabajo + " de " + asignatura + " el " + dia)
 
 
@@ -46,5 +46,6 @@ def main():
 	updater.dispatcher.add_handler(CommandHandler('Entregas',trabajosPendientes))
 	updater.start_polling()
 	updater.idle
+	
 if __name__ == '__main__':
     main()
