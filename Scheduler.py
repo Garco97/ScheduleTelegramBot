@@ -35,6 +35,10 @@ def trabajosPendientes(bot,update):
 		print(line)
 		trabajo,separador,resto = line.partition("_")
 		asignatura,separador,dia = resto.partition("-")
+		print(trabajo)
+		print(asignatura)
+		print(dia)
+		
 		update.message.reply_text("Entregar ",trabajo," de ",asignatura," el ", dia)
 
 
