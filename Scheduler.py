@@ -31,6 +31,7 @@ def horario(bot,update):
 def trabajosPendientes(bot,update):
 	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/trabajos.txt")
 	for line in file:
+		print(line)
 		line = line.decode('utf-8')
 		trabajo,separador,resto = line.partition("_")
 		asignatura,separador,dia = resto.partition("-")
