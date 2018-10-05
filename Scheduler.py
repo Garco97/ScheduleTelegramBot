@@ -31,11 +31,14 @@ def horario(bot,update):
 def trabajosPendientes(bot,update):
 	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/trabajos.txt")
 	for line in file:
-		line = line.decode('utf-8')
-		print(line)
-		trabajo,separador,resto = line.partition("_")
-		asignatura,separador,dia = resto.partition("-")	
-		update.message.reply_text("Entregar " + trabajo + " de " + asignatura + " el " + dia)
+		if line is "":
+			
+		else:
+			line = line.decode('utf-8')
+			print(line)
+			trabajo,separador,resto = line.partition("_")
+			asignatura,separador,dia = resto.partition("-")	
+			update.message.reply_text("Entregar " + trabajo + " de " + asignatura + " el " + dia)
 
 
 
@@ -46,6 +49,6 @@ def main():
 	updater.dispatcher.add_handler(CommandHandler('Entregas',trabajosPendientes))
 	updater.start_polling()
 	updater.idle
-	
+
 if __name__ == '__main__':
     main()
