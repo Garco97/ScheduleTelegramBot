@@ -27,7 +27,7 @@ def hoy(bot,update):
 						update.message.reply_text(horaInicio + "-" + horaFinal + " " + asignatura)
 	else:
 		update.message.reply_text("No tienes horario asignado")
-		
+
 def horario(bot,update):
 	update.message.reply_text("https://web.unican.es/centros/ciencias/Documents/Horarios%201819/Grado/G-Inf%202018-19%20V6.pdf")
 
@@ -48,7 +48,7 @@ def main():
 	updater = Updater('697984917:AAEPmyM3LemXq5MkEcepsrzb927Im9_wsAA')
 	updater.dispatcher.add_handler(CommandHandler('Hoy', hoy))
 	updater.dispatcher.add_handler(CommandHandler('Horario', horario))
-	updater.dispatcher.add_handler(CommandHandler('Entregas'trabajosPendientes))
+	updater.dispatcher.add_handler(CommandHandler('Entregas',trabajosPendientes))
 	updater.start_polling()
 	updater.idle
 if __name__ == '__main__':
