@@ -36,6 +36,7 @@ def trabajosPendientes(bot,update):
 	user = update.message.from_user
 	if(user.id == 223472488):
 		file = open("../ScheduleTelegramBot/trabajos.txt")
+		file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/trabajos.txt")
 		for line in file:
 			line = line.decode('utf-8')
 			trabajo,separador,resto = line.partition("_")
