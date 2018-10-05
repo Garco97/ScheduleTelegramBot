@@ -32,7 +32,7 @@ def trabajosPendientes(bot,update):
 	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/trabajos.txt")
 	for line in file:
 		if line is "":
-			
+			print("NOthing")
 		else:
 			line = line.decode('utf-8')
 			print(line)
