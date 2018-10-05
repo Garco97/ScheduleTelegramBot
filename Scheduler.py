@@ -37,7 +37,7 @@ def trabajosPendientes(bot,update):
 	if(user.id == 223472488):
 		file = open("../ScheduleTelegramBot/trabajos.txt")
 		for line in file:
-			line = line.decode('urf-8')
+			line = line.decode('utf-8')
 			trabajo,separador,resto = line.partition("_")
 			asignatura,separador,dia = resto.partition("-")
 			update.message.reply_text("Entregar ",trabajo," de ",asignatura," el ", dia)
