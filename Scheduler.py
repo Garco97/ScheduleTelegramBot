@@ -33,8 +33,8 @@ def trabajosPendientes(bot,update):
 	for line in file:
 		line = line.decode('utf-8')
 		print(line)
-		trabajo,separador,resto = line.partition("_")
-		asignatura,separador,dia = resto.partition("-")	
+		trabajo,separador,asignatura,separadorr,dia = line.partition("-")
+		#asignatura,separador,dia = resto.partition("-")	
 		update.message.reply_text("Entregar " + trabajo + " de " + asignatura + " el " + dia)
 
 
