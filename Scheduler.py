@@ -29,11 +29,12 @@ def horario(bot,update):
 
 
 def trabajosPendientes(bot,update):
-	file = urllib.request.urlopen("https://raw.githubusercontent.com/Garco97/ScheduleTelegramBot/master/trabajos.txt")
+	file = urllib.request.scan("../../trabajos.txt")
 	for line in file:
 		if line is "":
-			print("NOthing")
+
 		else:
+			now = datetime.datetime.now()
 			line = line.decode('utf-8')
 			print(line)
 			trabajo,separador,resto = line.partition("_")
