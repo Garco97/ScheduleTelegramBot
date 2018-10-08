@@ -32,7 +32,7 @@ def trabajosPendientes(bot,update):
 	file = urllib.request.scan("../../trabajos.txt")
 	for line in file:
 		if line is "":
-
+			print("Nothing")
 		else:
 			now = datetime.datetime.now()
 			line = line.decode('utf-8')
